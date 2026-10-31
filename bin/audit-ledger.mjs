@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+// dsh-alpha-guard · DeepSeek Harness 策略层护栏
+// https://github.com/xiangshu2026/dsh-alpha-guard
 /**
  * audit-ledger.mjs —— alpha-guard 审计日志完整性账本
  *

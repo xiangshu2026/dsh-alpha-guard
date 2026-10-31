@@ -1,5 +1,14 @@
 # dsh-alpha-guard
 
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![DeepSeek Harness](https://img.shields.io/badge/DeepSeek%20Harness-plugin-purple)](https://github.com/xiangshu2026/dsh-alpha-guard)
+[![Node](https://img.shields.io/badge/node-%3E%3D20-brightgreen)](package.json)
+[![Self-test](https://img.shields.io/badge/self--test-included-brightgreen)](test/selftest.mjs)
+[![Scope](https://img.shields.io/badge/scope-policy%20layer%2C%20not%20AV-orange)](#-先读这段它不是什么)
+
+> 原仓库：https://github.com/xiangshu2026/dsh-alpha-guard
+> 如果你是从别处下载的，建议回原仓库获取最新版与 issue 支持。
+
 给 **DeepSeek Harness** 的 AI 助手加一层策略护栏：读哪些文件、写哪些目录、能跑哪些命令、
 子代理能干什么、下载的可执行文件是否可疑——在工具调用**真正执行之前**做一次检查。
 

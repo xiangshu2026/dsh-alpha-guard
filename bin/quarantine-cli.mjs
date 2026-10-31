@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+// dsh-alpha-guard · DeepSeek Harness 策略层护栏
+// https://github.com/xiangshu2026/dsh-alpha-guard
 /**
  * alpha-guard 隔离区命令行工具
  *
