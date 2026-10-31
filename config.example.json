@@ -1,0 +1,102 @@
+{
+  "_readme": "dsh-alpha-guard 配置模板。复制成 config.json 再改；留空的项走内置默认值。路径里的 ~ 会展开成用户主目录。",
+  "version": 1,
+  "enabled": true,
+  "failClosed": false,
+  "read": {
+    "allowRoots": [
+      "~/Desktop",
+      "~/Documents",
+      "~/Downloads",
+      "~/Pictures",
+      "~/Videos",
+      "~/Music"
+    ],
+    "_allowRoots": "额外工作盘请用环境变量 DSH_GUARD_EXTRA_ROOTS（分号分隔），或直接写进这个数组",
+    "denyPaths": [
+      "~/.ssh",
+      "~/.gnupg",
+      "~/.aws",
+      "~/.azure"
+    ],
+    "denyNamePatterns": [
+      "*.kdbx",
+      "*.kdb",
+      "*.keychain",
+      "id_rsa",
+      "id_ed25519",
+      "*.pem",
+      "*.pfx",
+      "*.p12"
+    ],
+    "denyOtherUserProfiles": true,
+    "denyNetworkPaths": true
+  },
+  "write": {
+    "denyPaths": [
+      "~/.ssh",
+      "~/.gnupg",
+      "~/.aws",
+      "~/.azure",
+      "C:/Windows",
+      "C:/Program Files",
+      "C:/Program Files (x86)",
+      "C:/ProgramData"
+    ],
+    "denyNamePatterns": [
+      "*.kdbx",
+      "*.kdb",
+      "*.keychain",
+      "id_rsa",
+      "id_ed25519"
+    ],
+    "denyOtherUserProfiles": true,
+    "denyNetworkPaths": true
+  },
+  "commands": {
+    "denyPathsInText": true,
+    "mode": "deny",
+    "allowExact": [],
+    "extraDenyPatterns": [],
+    "extraWarnPatterns": []
+  },
+  "runCode": {
+    "scanText": true
+  },
+  "web": {
+    "audit": true,
+    "denyLocalHosts": true,
+    "suspiciousUrlLength": 500,
+    "sensitiveKeywords": [
+      "password",
+      "passwd",
+      "token",
+      "secret",
+      "api_key",
+      "apikey",
+      "cookie"
+    ]
+  },
+  "subagent": {
+    "enabled": true,
+    "allowWeb": true,
+    "denyTools": [
+      "memory",
+      "dtodo",
+      "de_channel_send",
+      "subagent",
+      "subagent_fork",
+      "spawn_teammate"
+    ]
+  },
+  "malware": {
+    "enabled": true,
+    "maxBytes": 33554432,
+    "blockAt": 30,
+    "notifyOnly": false,
+    "autoQuarantine": true,
+    "quarantineDir": "",
+    "subagentNotify": true,
+    "pendingKeepDays": 30
+  }
+}

@@ -1,0 +1,11 @@
+# dsh-alpha-guard bundle patch: inserts one host plugin row.
+# The plugin registers a global tools.guard() that enforces the owner's
+# read whitelist, sensitive-path deny list, dangerous-command blocking and
+# subagent isolation. Policy lives in %USERPROFILE%\.dsh\alpha-guard\config.json
+# (hot reloaded; no restart needed after edits).
+- insert:
+    - id: dsh-alpha-guard
+      name: 'dsh-alpha-guard'
+      config:
+        enabled: true
+        # configPath / auditPath default to %USERPROFILE%\.dsh\alpha-guard\

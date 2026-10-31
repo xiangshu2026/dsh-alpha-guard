@@ -1,0 +1,17 @@
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+
+# Local policy config and audit trail (contain personal paths and activity)
+config.json
+audit.jsonl
+audit.jsonl.*
+quarantine/
+pending.json
+install-approval.json
+pause-state.json
+pause.log
+
+# Backups
+*.bak-*

@@ -1,0 +1,50 @@
+{
+  "name": "dsh-alpha-guard",
+  "version": "1.0.0",
+  "description": "Policy-layer guard for DeepSeek Harness: read whitelist, sensitive-path deny list, dangerous-command blocking, subagent isolation, install approval and malware static audit. A first line of defense, not an antivirus.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/",
+    "bin/",
+    "scripts/",
+    "cordis.patch.yml",
+    "config.example.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/selftest.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "guard",
+    "policy",
+    "security",
+    "audit",
+    "quarantine"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiangshu2026/dsh-alpha-guard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xiangshu2026/dsh-alpha-guard/issues"
+  },
+  "homepage": "https://github.com/xiangshu2026/dsh-alpha-guard#readme",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
