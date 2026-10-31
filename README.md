@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![DeepSeek Harness](https://img.shields.io/badge/DeepSeek%20Harness-plugin-purple)](https://github.com/xiangshu2026/dsh-alpha-guard)
 [![Node](https://img.shields.io/badge/node-%3E%3D20-brightgreen)](package.json)
-[![Self-test](https://img.shields.io/badge/self--test-included-brightgreen)](test/selftest.mjs)
+[![selftest](https://github.com/xiangshu2026/dsh-alpha-guard/actions/workflows/selftest.yml/badge.svg)](https://github.com/xiangshu2026/dsh-alpha-guard/actions/workflows/selftest.yml)
 [![Scope](https://img.shields.io/badge/scope-policy%20layer%2C%20not%20AV-orange)](#-先读这段它不是什么)
 
 > 原仓库：https://github.com/xiangshu2026/dsh-alpha-guard
