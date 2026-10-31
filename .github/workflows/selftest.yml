@@ -1,5 +1,9 @@
 name: selftest
 
+# 这个插件是 Windows 专用的（策略里大量依赖 %USERPROFILE%、C:\ 盘符、
+# PowerShell 语义），在 Linux 上跑测试会因为环境变量不存在而必然失败。
+# 所以 CI 只在 windows-latest 上验证。
+
 on:
   push:
     branches: [main]
@@ -9,7 +13,7 @@ on:
 
 jobs:
   selftest:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     strategy:
       matrix:
         node: [20, 22]
